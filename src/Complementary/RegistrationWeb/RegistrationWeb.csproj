@@ -180,6 +180,11 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Asset\images\Progress1.png" />
+    <Content Include="Asset\images\Progress2.png" />
+    <Content Include="Asset\images\Progress3.png" />
+    <Content Include="Asset\images\Progress4.png" />
+    <Content Include="Asset\images\Progress5.png" />
     <Content Include="Content\app.css">
       <DependentUpon>app.scss</DependentUpon>
     </Content>
