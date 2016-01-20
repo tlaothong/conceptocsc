@@ -172,6 +172,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PaymentCodeController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -352,6 +353,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Register\PersonalDetail.cshtml" />
+    <Content Include="Views\PaymentCode\PaymentCode.cshtml" />
     <None Include="Service References\RegistrationService\RegistrationService.wsdl" />
     <None Include="Service References\RegistrationService\RegistrationService.xsd">
       <SubType>Designer</SubType>
