@@ -170,6 +170,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CertificatedController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PaymentCodeController.cs" />
@@ -354,6 +355,8 @@
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Register\PersonalDetail.cshtml" />
     <Content Include="Views\PaymentCode\PaymentCode.cshtml" />
+    <Content Include="Views\Certificated\Certificated.cshtml" />
+    <Content Include="Views\Certificated\CertificatedDetail.cshtml" />
     <None Include="Service References\RegistrationService\RegistrationService.wsdl" />
     <None Include="Service References\RegistrationService\RegistrationService.xsd">
       <SubType>Designer</SubType>
