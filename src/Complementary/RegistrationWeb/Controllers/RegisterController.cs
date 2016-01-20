@@ -19,5 +19,11 @@ namespace RegistrationWeb.Controllers
         {
             return View();
         }
+
+        // GET: Register payment
+        public ActionResult Payment()
+        {
+            return View();
+        }
     }
 }

@@ -354,6 +354,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Register\PersonalDetail.cshtml" />
+    <Content Include="Views\Register\Payment.cshtml" />
     <Content Include="Views\PaymentCode\PaymentCode.cshtml" />
     <Content Include="Views\Certificated\Certificated.cshtml" />
     <Content Include="Views\Certificated\CertificatedDetail.cshtml" />

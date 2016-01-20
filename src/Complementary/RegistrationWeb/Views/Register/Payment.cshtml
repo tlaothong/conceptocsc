@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "ชำระเงิน";
+}
+@*Image*@
+<div>
+    <br />
+    <img class="img-responsive" src="~/Asset/images/Progress3.png" />
+</div>
+
+@*Content*@
+<div class="container">
+    <h2>ชำระเงิน</h2>
+    <form class="form-horizontal">
+
+        <div class="form-group">
+            <div class="col-md-offset-2 radio">
+                <label>
+                    <input type="radio" name="optionPayment" checked>
+                    โอนเงินผ่านบัญชีธนาคาร
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 radio">
+                <label>
+                    <input type="radio" name="optionPayment">
+                    เค้าเตอร์เซอร์วิช 7-11
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 radio">
+                <label>
+                    <input type="radio" name="optionPayment">
+                    บัตรเครดิต
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 radio">
+                <label>
+                    <input type="radio" name="optionPayment">
+                    Online banking
+                </label>
+            </div>
+        </div>
+    </form>
+
+    @*ถัดไป*@
+    <div class="row">
+        <a class="btn btn-lg btn-success pull-left" href="/Register/PersonalDetail"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> ย้อนกลับ</a>
+        <a class="btn btn-lg btn-success pull-right">ถัดไป <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+    </div>
+</div>
