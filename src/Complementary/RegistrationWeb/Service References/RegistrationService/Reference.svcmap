@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dc3e74ba-2633-498d-84d5-62269f9998c4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://eexamthai.cloudapp.net/Services/RegistrationService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RegistrationService.wsdl" MetadataType="Wsdl" ID="7590675f-9409-41ff-a47c-824dceea448a" SourceId="1" SourceUrl="http://eexamthai.cloudapp.net/Services/RegistrationService.svc?wsdl" />
+    <MetadataFile FileName="RegistrationService.xsd" MetadataType="Schema" ID="dfe60af2-ae93-4e5d-81b7-cdf306e0cb33" SourceId="1" SourceUrl="http://eexamthai.cloudapp.net/Services/RegistrationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RegistrationService1.xsd" MetadataType="Schema" ID="58ef1275-988b-48ce-a924-3a55ed88ec48" SourceId="1" SourceUrl="http://eexamthai.cloudapp.net/Services/RegistrationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RegistrationService.disco" MetadataType="Disco" ID="b741b061-efb9-48d8-9e7d-94965423d315" SourceId="1" SourceUrl="http://eexamthai.cloudapp.net/Services/RegistrationService.svc?disco" />
+    <MetadataFile FileName="RegistrationService2.xsd" MetadataType="Schema" ID="697bdfd0-7484-4672-83da-cb3af0ef15d5" SourceId="1" SourceUrl="http://eexamthai.cloudapp.net/Services/RegistrationService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

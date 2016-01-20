@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TheS.eXam.Web.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TheS.eXam.Web.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfRegister">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Register" nillable="true" type="tns:Register" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRegister" nillable="true" type="tns:ArrayOfRegister" />
+  <xs:complexType name="Register">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicationId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AppointDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ApprovedDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BirthDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CourseType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExamNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExpireDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ForPractice" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ForTestSystem" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsListenQuiz" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QuizLanguage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SchoolId" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Register" nillable="true" type="tns:Register" />
+</xs:schema>
