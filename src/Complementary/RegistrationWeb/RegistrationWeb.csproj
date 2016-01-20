@@ -180,8 +180,14 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\app.css">
+      <DependentUpon>app.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\app.min.css">
+      <DependentUpon>app.css</DependentUpon>
+    </Content>
+    <Content Include="Content\x_bootstrap.css" />
+    <Content Include="Content\x_bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -259,6 +265,13 @@
     <Content Include="Content\bootstrap\mixins\_border-radius.scss" />
     <Content Include="Content\bootstrap\mixins\_background-variant.scss" />
     <Content Include="Content\bootstrap\mixins\_alerts.scss" />
+    <Content Include="Content\_bootswatch.scss" />
+    <Content Include="Content\_variables.scss" />
+    <Content Include="Content\app.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap\affix.js" />
     <Content Include="Scripts\bootstrap\alert.js" />
