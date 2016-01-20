@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "พิมพ์บัตรเข้าสอบ";
+}
+
+@*Image*@
+<div>
+    <br />
+    <img class="img-responsive" src="~/Asset/images/Progress5.png" />
+</div>
+    
+@*Content*@
+<div class="container">
+    <h2>พิมพ์บัตรเข้าสอบ</h2>
+
+    <form class="form-horizontal">
+        <fieldset class="well">
+            <legend></legend>
+
+            @*รหัสผู้เข้าสอบ*@
+            <div class="form-group">
+                <h2 class="col-md-3 control-label">รหัสผู้เข้าสอบ</h2>
+                <h2 class="col-md-7 control-label">5DS3A14e64a3</h2>
+            </div>
+
+            @*ชื่อนามสกุล*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">ชื่อนามสกุล</label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" disabled="disabled" placeholder="ชื่อนามสกุล">
+                </div>
+            </div>
+
+            @*วันที่สอบ*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">วันที่สอบ</label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" disabled="disabled" placeholder="20/1/2016">
+                </div>
+            </div>
+
+            @*สถานที่สอบ*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">สถานที่สอบ</label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" disabled="disabled" placeholder="สำนักงานกรุงเทพ">
+                </div>
+            </div>
+
+            @*หลักสูตร*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">หลักสูตร</label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" disabled="disabled" placeholder="ภาค ก">
+                </div>
+            </div>
+
+            @*รอบการสอบ*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">รอบการสอบ</label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" disabled="disabled" placeholder="เช้า (9.00 - 12.00 น)">
+                </div>
+            </div>
+
+            @*พิมพ์บัตรเข้าสอบ*@
+            <div class="col-md-offset-4">
+                <button class="btn btn-lg btn-success">พิมพ์บัตรเข้าสอบ</button>
+            </div>
+        </fieldset>
+    </form>
+</div>

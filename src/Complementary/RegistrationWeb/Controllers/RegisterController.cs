@@ -20,8 +20,20 @@ namespace RegistrationWeb.Controllers
             return View();
         }
 
-        // GET: Register payment
+        // GET: Payment
         public ActionResult Payment()
+        {
+            return View();
+        }
+
+        // GET: Confirm
+        public ActionResult Confirm()
+        {
+            return View();
+        }
+        
+        // GET: Print exan card
+        public ActionResult PrintExanCard()
         {
             return View();
         }

@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewBag.Title = "ยืนยันการสมัคร";
+}
+
+@*Image*@
+<div>
+    <br />
+    <img class="img-responsive" src="~/Asset/images/Progress4.png" />
+</div>
+
+@*Content*@
+<div class="container">
+    <h2>ชำระด้วยบัตรเครดิต</h2>
+
+    <form class="form-horizontal">
+        <fieldset class="well">
+            <legend></legend>
+
+            @*หมายเลขบัตร*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">หมายเลขบัตร</label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" placeholder="หมายเลขบัตร">
+                </div>
+            </div>
+
+            @*วันหมดอายุบัตร*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">วันหมดอายุบัตร</label>
+                <div class="col-md-7">
+                    <input type="date" class="form-control">
+                </div>
+            </div>
+
+            @*หมายเลข CVV*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">หมายเลข CVV (3 ตัวอักษร)</label>
+                <div class="col-md-7">
+                    <input type="number" class="form-control" placeholder="000">
+                </div>
+            </div>
+
+            @*ชื่อบนบัตร*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">ชื่อบนบัตร</label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" placeholder="ชื่อบนบัตร">
+                </div>
+            </div>
+
+            @*ประเทศธนาคารผู้ออกบัตร*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">ประเทศธนาคารผู้ออกบัตร</label>
+                <div class="col-md-7">
+                    <select class="col-md-7 form-control">
+                        <option>Thailand</option>
+                        <option>America</option>
+                        <option>Korea</option>
+                    </select>
+                </div>
+            </div>
+
+            @*ชื่อธนาคารผู้ออกบัตร*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">ชื่อธนาคารผู้ออกบัตร</label>
+                <div class="col-md-7">
+                    <select class="form-control">
+                        <option>กสิกร</option>
+                        <option>ไทยพาณิชย์</option>
+                        <option>กรุงไทย</option>
+                    </select>
+                </div>
+            </div>
+
+            @*อีเมล์ผู้ชำระเงิน*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">อีเมล์ผู้ชำระเงิน</label>
+                <div class="col-md-7">
+                    <input type="email" class="form-control" placeholder="example@email.com">
+                </div>
+            </div>
+
+            @*เบอร์โทรศัพท์ผู้ชำระเงิน*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">เบอร์โทรศัพท์ผู้ชำระเงิน</label>
+                <div class="col-md-7">
+                    <input type="tel" class="form-control" placeholder="0000000000">
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+    @*ถัดไป*@
+    <div class="row">
+        <a class="btn btn-lg btn-success pull-left" href="/Register/Payment"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> ย้อนกลับ</a>
+        <a class="btn btn-lg btn-success pull-right" href="/Register/PrintExanCard">ยืนยันการชำระเงิน <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+    </div>
+</div>
+

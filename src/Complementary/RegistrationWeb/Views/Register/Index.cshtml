@@ -12,43 +12,52 @@
 @*Content*@
 <div class="container">
     <h2>เลือกวันสอบ</h2>
-    <div class="col-lg-6">
-        <input type="date" />
-    </div>
-    <div class="col-lg-6">
-        @*สถานที่สอบ*@
-        <div class="row">
-            <h4>สถานที่สอบ</h4>
-            <select class="form-control" disabled="disabled">
-                <option selected="selected">สำนักงาน กรุงเทพฯ</option>
-            </select>
-        </div>
 
-        @*หลักสูตร*@
-        <div class="row">
-            <h4>หลักสูตร</h4>
-            <select class="form-control" disabled="disabled">
-                <option selected="selected">ภาค ก</option>
-            </select>
-        </div>
+    <form class="form-horizontal">
+        <fieldset class="well">
+            <legend></legend>
+            @*Calendar*@
+            <div class="col-lg-6">
+                <input type="date" />
+            </div>
 
-        @*รอบการสอบ*@
-        <div class="row">
-            <h4>รอบการสอบ</h4>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="optionsRadios" checked>
-                    เช้า (9.00 - 12.00 น)
-                </label>
+            @*Input content*@
+            <div class="col-lg-6">
+                @*สถานที่สอบ*@
+                <div class="row">
+                    <h4>สถานที่สอบ</h4>
+                    <select class="form-control">
+                        <option selected="selected">สำนักงาน กรุงเทพฯ</option>
+                    </select>
+                </div>
+
+                @*หลักสูตร*@
+                <div class="row">
+                    <h4>หลักสูตร</h4>
+                    <select class="form-control">
+                        <option selected="selected">ภาค ก</option>
+                    </select>
+                </div>
+
+                @*รอบการสอบ*@
+                <div class="row">
+                    <h4>รอบการสอบ</h4>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios" checked>
+                            เช้า (9.00 - 12.00 น)
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="optionsRadios">
+                            บ่าย (13.00 - 16.00 น)
+                        </label>
+                    </div>
+                </div>
             </div>
-            <div class="radio">
-                <label>
-                    <input type="radio" name="optionsRadios">
-                    บ่าย (13.00 - 16.00 น)
-                </label>
-            </div>
-        </div>
-    </div>
+        </fieldset>
+    </form>
 
     @*ถัดไป*@
     <div class="row">
