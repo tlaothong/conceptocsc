@@ -23,7 +23,34 @@ namespace RegistrationWeb.Controllers
         }
 
         // GET: Payment
-        public ActionResult Payment()
+        public ActionResult Payment(SharedViewModel model)
+        {
+            return View();
+        }
+
+        public ActionResult ConfirmPayment(SharedViewModel model)
+        {
+            switch (model.PaymentMethod)
+            {
+                case 1:
+                    return View("ConfirmByBank", model);
+                case 2:
+                    return View("ConfirmByCounterService", model);
+                case 3:
+                    return View("ConfirmByCreditCard", model);
+                case 4:
+                    return View("ConfirmByOnlineBanking", model);
+                default:
+                    return View("ConfirmByBank");
+            }
+        }
+
+        public ActionResult ConfirmByBank()
+        {
+            return View();
+        }
+
+        public ActionResult ConfirmByCounterService()
         {
             return View();
         }
@@ -37,14 +64,8 @@ namespace RegistrationWeb.Controllers
         {
             return View();
         }
-        public ActionResult ConfirmByCounterService()
-        {
-            return View();
-        }
-        public ActionResult ConfirmByBank()
-        {
-            return View();
-        }
+        
+        
         // GET: Invoice
         public ActionResult Invoice()
         {
@@ -118,7 +139,7 @@ namespace RegistrationWeb.Controllers
                 ApprovedDateTime = DateTime.Now,
                 LicenseType = data.ExamType,
                 ForPractice = false,
-                ForTestSystem = false,                
+                ForTestSystem = false,
             };
             #endregion Convertion
 
