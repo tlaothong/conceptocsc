@@ -1,4 +1,5 @@
-﻿
+﻿@model RegistrationWeb.Models.SharedViewModel
+
 @{
     ViewBag.Title = "ConfirmByCreditCard";
 }
@@ -11,71 +12,84 @@
     </div>
 </div>
 
-@*Content*@
 <div>
     <h2>ชำระด้วยบัตรเครดิต</h2>
 
-    <form class="form-horizontal">
-        <fieldset class="well">
-            <legend></legend>
-            @*ประเภทบัตร*@
-            <div class="form-group">
-                <label class="col-md-3 control-label">ประเภทบัตร</label>
-                <div class="col-md-7">
-                    <select class="form-control">
-                        <option>VISA</option>
-                        <option>Master Card</option>
-                    </select>
+    @using (Html.BeginForm("PrintExamCard", "Register"))
+    {
+        <div class="form-horizontal">
+            @Html.HiddenFor(model => model.ExamDate)
+            @Html.HiddenFor(model => model.ExamLocation)
+            @Html.HiddenFor(model => model.ExamType)
+            @Html.HiddenFor(model => model.ExamPeriod)
+            @Html.HiddenFor(model => model.FirstName)
+            @Html.HiddenFor(model => model.LastName)
+            @Html.HiddenFor(model => model.BirthDate)
+            @Html.HiddenFor(model => model.PID)
+            @Html.HiddenFor(model => model.Address)
+            @Html.HiddenFor(model => model.PhoneNum)
+            @Html.HiddenFor(model => model.Email)
+            @Html.HiddenFor(model => model.PaymentMethod)
+            @Html.HiddenFor(model => model.RegisterCode)
+            <fieldset class="well">
+                @*ประเภทบัตร*@
+                <div class="form-group">
+                    <label class="col-md-3 control-label">ประเภทบัตร</label>
+                    <div class="col-md-7">
+                        <select class="form-control">
+                            <option>VISA</option>
+                            <option>Master Card</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            @*หมายเลขบัตร*@
-            <div class="form-group">
-                <label class="col-md-3 control-label">หมายเลขบัตร</label>
-                <div class="col-md-7">
-                    <input type="text" class="form-control" placeholder="หมายเลขบัตร">
+                @*หมายเลขบัตร*@
+                <div class="form-group">
+                    <label class="col-md-3 control-label">หมายเลขบัตร</label>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" placeholder="หมายเลขบัตร">
+                    </div>
                 </div>
-            </div>
 
-            @*วันหมดอายุบัตร*@
-            <div class="form-group">
-                <label class="col-md-3 control-label">วันหมดอายุบัตร</label>
-                <div class="col-md-7">
-                    <input type="date" class="form-control">
+                @*วันหมดอายุบัตร*@
+                <div class="form-group">
+                    <label class="col-md-3 control-label">วันหมดอายุบัตร</label>
+                    <div class="col-md-7">
+                        <input type="date" class="form-control">
+                    </div>
                 </div>
-            </div>
 
-            @*หมายเลข CVV*@
-            <div class="form-group">
-                <label class="col-md-3 control-label">หมายเลข CVV (3 ตัวอักษร)</label>
-                <div class="col-md-7">
-                    <input type="number" class="form-control" placeholder="000">
+                @*หมายเลข CVV*@
+                <div class="form-group">
+                    <label class="col-md-3 control-label">หมายเลข CVV (3 ตัวอักษร)</label>
+                    <div class="col-md-7">
+                        <input type="number" class="form-control" placeholder="000">
+                    </div>
                 </div>
-            </div>
 
-            @*ชื่อบนบัตร*@
-            <div class="form-group">
-                <label class="col-md-3 control-label">ชื่อบนบัตร</label>
-                <div class="col-md-7">
-                    <input type="text" class="form-control" placeholder="ชื่อบนบัตร">
+                @*ชื่อบนบัตร*@
+                <div class="form-group">
+                    <label class="col-md-3 control-label">ชื่อบนบัตร</label>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" placeholder="ชื่อบนบัตร">
+                    </div>
                 </div>
-            </div>
 
-            @*ประเทศธนาคารผู้ออกบัตร*@
-            <div class="form-group">
-                <label class="col-md-3 control-label">ประเทศธนาคารผู้ออกบัตร</label>
-                <div class="col-md-7">
-                    <select class="col-md-7 form-control">
-                        <option>Thailand</option>
-                    </select>
+                @*ประเทศธนาคารผู้ออกบัตร*@
+                <div class="form-group">
+                    <label class="col-md-3 control-label">ประเทศธนาคารผู้ออกบัตร</label>
+                    <div class="col-md-7">
+                        <select class="col-md-7 form-control">
+                            <option>Thailand</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-        </fieldset>
-    </form>
+            </fieldset>
+        </div>
 
-    @*ถัดไป*@
-    <div class="clearfix">
-        <a class="btn btn-lg btn-info pull-left" href="/Register/Payment"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> ย้อนกลับ</a>
-        <a class="btn btn-lg btn-info pull-right" href="/Register/PrintExamCard">ยืนยันการชำระเงิน <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-    </div>
+        <div class="clearfix">
+            <a class="btn btn-lg btn-info pull-left" href="/Register/Payment"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> ย้อนกลับ</a>
+            <button class="btn btn-lg btn-info pull-right" type="submit">ยืนยันการชำระเงิน <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+        </div>
+    }
 </div>
 

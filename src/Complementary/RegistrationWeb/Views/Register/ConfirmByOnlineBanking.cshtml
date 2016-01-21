@@ -1,8 +1,8 @@
-﻿
+﻿@model RegistrationWeb.Models.SharedViewModel
+
 @{
     ViewBag.Title = "ConfirmByOnlineBanking";
 }
-
 
 <div class="row">
     <br />
@@ -11,31 +11,43 @@
     </div>
 </div>
 
-@*Content*@
 <div>
     <h2>ชำระด้วยบริการ Internet Banking</h2>
+    @using (Html.BeginForm("PrintExamCard", "Register"))
+    {
+        <div class="form-horizontal">
+            @Html.HiddenFor(model => model.ExamDate)
+            @Html.HiddenFor(model => model.ExamLocation)
+            @Html.HiddenFor(model => model.ExamType)
+            @Html.HiddenFor(model => model.ExamPeriod)
+            @Html.HiddenFor(model => model.FirstName)
+            @Html.HiddenFor(model => model.LastName)
+            @Html.HiddenFor(model => model.BirthDate)
+            @Html.HiddenFor(model => model.PID)
+            @Html.HiddenFor(model => model.Address)
+            @Html.HiddenFor(model => model.PhoneNum)
+            @Html.HiddenFor(model => model.Email)
+            @Html.HiddenFor(model => model.PaymentMethod)
+            @Html.HiddenFor(model => model.RegisterCode)
+            <fieldset class="well">
 
-    <form class="form-horizontal">
-        <fieldset class="well">
-            @*ชื่อธนาคารผู้ออกบัตร*@
-            <div class="form-group">
-                <label class="col-md-3 control-label">ชื่อธนาคารผู้ออกบัตร</label>
-                <div class="col-md-7">
-                    <select class="form-control">
-                        <option>กสิกร</option>
-                        <option>ไทยพาณิชย์</option>
-                        <option>กรุงไทย</option>
-                    </select>
+                <div class="form-group">
+                    <label class="col-md-3 control-label">ชื่อธนาคารผู้ออกบัตร</label>
+                    <div class="col-md-7">
+                        <select class="form-control">
+                            <option>กสิกร</option>
+                            <option>ไทยพาณิชย์</option>
+                            <option>กรุงไทย</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <br />
-        </fieldset>
-    </form>
+                <br />
+            </fieldset>
+        </div>
 
-
-    @*ถัดไป*@
-    <div class="clearfix">
-        <a class="btn btn-lg btn-info pull-left" href="/Register/Payment"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> ย้อนกลับ</a>
-        <a class="btn btn-lg btn-info pull-right" href="/Register/PrintExamCard">ยืนยันการชำระเงิน <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-    </div>
+        <div class="clearfix">
+            <a class="btn btn-lg btn-info pull-left" href="/Register/Payment"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> ย้อนกลับ</a>
+            <button class="btn btn-lg btn-info pull-right" type="submit">ยืนยันการชำระเงิน <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+        </div>
+    }
 </div>

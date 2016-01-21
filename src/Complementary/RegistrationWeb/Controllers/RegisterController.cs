@@ -45,26 +45,25 @@ namespace RegistrationWeb.Controllers
             }
         }
 
-        public ActionResult ConfirmByBank()
+        public ActionResult ConfirmByBank(SharedViewModel model)
         {
             return View();
         }
 
-        public ActionResult ConfirmByCounterService()
+        public ActionResult ConfirmByCounterService(SharedViewModel model)
         {
             return View();
         }
 
         // GET: Confirm
-        public ActionResult ConfirmByCreditCard()
+        public ActionResult ConfirmByCreditCard(SharedViewModel model)
         {
             return View();
         }
-        public ActionResult ConfirmByOnlineBanking()
+        public ActionResult ConfirmByOnlineBanking(SharedViewModel model)
         {
             return View();
         }
-        
         
         // GET: Invoice
         public ActionResult Invoice()
@@ -73,7 +72,7 @@ namespace RegistrationWeb.Controllers
         }
 
         // GET: Print exan card
-        public ActionResult PrintExanCard(SharedViewModel model)
+        public ActionResult PrintExamCard(SharedViewModel model)
         {
             //SharedViewModel data = new SharedViewModel
             //{
@@ -92,7 +91,18 @@ namespace RegistrationWeb.Controllers
             //    RegisterCode = "13579",
             //};
             //RegisterToEExam(model);
-            return View();
+
+            //Hack: Mock data
+            model.RegisterCode = "5DS3A14e64a3";
+
+            ViewBag.ExamTypeText = string.Empty;
+            if (model.ExamType == "OCSCa") ViewBag.ExamTypeText = "ภาค ก";
+            ViewBag.ExamPeriodText = string.Empty;
+            if (model.ExamPeriod == 1) ViewBag.ExamPeriodText = "เช้า (9.00 - 12.00 น.)";
+            else if (model.ExamPeriod == 2) ViewBag.ExamPeriodText = "(13.00 - 16.00 น.)";
+
+            RegisterToEExam(model);
+            return View(model);
         }
         public ActionResult ExamCard()
         {

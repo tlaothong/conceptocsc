@@ -1,72 +1,66 @@
-﻿
+﻿@model RegistrationWeb.Models.SharedViewModel
+
 @{
     ViewBag.Title = "พิมพ์บัตรเข้าสอบ";
 }
 
-@*Image*@
 <div class="row">
     <br />
     <div class="col-md-8 col-md-offset-2">
         <img class="img-responsive" src="~/Asset/images/Progress5.png" />
     </div>
 </div>
-    
-@*Content*@
+
 <div>
     <h2>พิมพ์บัตรเข้าสอบ</h2>
 
-    <form class="form-horizontal">
+    <div class="form-horizontal">
         <fieldset class="well">
-            @*รหัสผู้เข้าสอบ*@
+
             <div class="form-group">
                 <h3 class="col-md-3 control-label">รหัสผู้เข้าสอบ</h3>
-                <h2 class="col-md-7 text-danger">5DS3A14e64a3</h2>
+                <h2 class="col-md-7 text-danger">@Model.RegisterCode</h2>
             </div>
 
-            @*ชื่อนามสกุล*@
             <div class="form-group">
                 <label class="col-md-3 control-label">ชื่อนามสกุล</label>
                 <div class="col-md-7">
-                    <h4 class="text-dark">นายณรงค์ ฟางน้อย</h4>
+                    <h4 class="text-dark">@Model.FirstName @Model.LastName</h4>
                 </div>
             </div>
 
-            @*วันที่สอบ*@
             <div class="form-group">
                 <label class="col-md-3 control-label">วันที่สอบ</label>
                 <div class="col-md-7">
-                    <h4 class="text-dark">20/1/2016</h4>
+                    <h4 class="text-dark">@Model.ExamDate</h4>
                 </div>
             </div>
 
-            @*สถานที่สอบ*@
             <div class="form-group">
                 <label class="col-md-3 control-label">สถานที่สอบ</label>
                 <div class="col-md-7">
-                    <h4 class="text-dark">สำนักงานกรุงเทพ</h4>
+                    <h4 class="text-dark">@Model.ExamLocation</h4>
                 </div>
             </div>
 
-            @*หลักสูตร*@
             <div class="form-group">
                 <label class="col-md-3 control-label">หลักสูตร</label>
                 <div class="col-md-7">
-                    <h4 class="text-dark">ภาค ก</h4>
+                    <h4 class="text-dark">@ViewBag.ExamTypeText</h4>
                 </div>
             </div>
 
-            @*รอบการสอบ*@
             <div class="form-group">
                 <label class="col-md-3 control-label">รอบการสอบ</label>
                 <div class="col-md-7">
-                    <h4 class="text-dark">เช้า (9.00 - 12.00 น)</h4>
+                    <h4 class="text-dark">@ViewBag.ExamPeriodText</h4>
                 </div>
             </div>
 
-            @*พิมพ์บัตรเข้าสอบ*@
             <div class="text-center">
                 <a class="btn btn-lg btn-info" target="_blank" href="/Register/ExamCard">พิมพ์บัตรเข้าสอบ</a>
             </div>
         </fieldset>
-    </form>
+    </div>
+
 </div>
