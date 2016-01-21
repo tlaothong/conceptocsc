@@ -193,6 +193,7 @@
   <ItemGroup>
     <Content Include="Asset\images\barcode.png" />
     <Content Include="Asset\images\Logo_Customer.png" />
+    <Content Include="Asset\images\OCSC_Banner.jpg" />
     <Content Include="Asset\images\Progress1.png" />
     <Content Include="Asset\images\Progress2.png" />
     <Content Include="Asset\images\Progress3.png" />
