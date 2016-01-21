@@ -72,6 +72,10 @@ namespace RegistrationWeb.Controllers
             //RegisterToEExam(model);
             return View();
         }
+        public ActionResult ExamCard()
+        {
+            return View();
+        }
 
         /// <summary>
         /// 

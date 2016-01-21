@@ -5,40 +5,71 @@
 
 <div>
     <h2>รายละเอียดการสอบ</h2>
-    <form class="form-horizontal well">
-    <br />
-        <div class="form-group">
-            <div class="col-md-3 col-md-offset-3">
-                <label><strong>รหัสผู้เข้าสอบ :</strong></label>
-                <span>5DS3A14e64a3</span>
+
+    <form class="form-horizontal">
+        <fieldset class="well">
+            @*รหัสผู้เข้าสอบ*@
+            <div class="form-group">
+                <h3 class="col-md-3 control-label">รหัสผู้เข้าสอบ</h3>
+                <h2 class="col-md-7 text-danger">5DS3A14e64a3</h2>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-3 col-md-offset-3">
-                <label><strong>ชื่อ :</strong></label>
-                <span>นาย xxxxxxx</span>
+
+            @*ชื่อนามสกุล*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">ชื่อนามสกุล</label>
+                <div class="col-md-7">
+                    <h4 class="text-dark">นายณรงค์ ฟางน้อย</h4>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-3 col-md-offset-3">
-                <label><strong>หลักสูตร :</strong></label>
-                <span>ภาค ก</span>
+
+            @*วันที่สอบ*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">วันที่สอบ</label>
+                <div class="col-md-7">
+                    <h4 class="text-dark">20/1/2016</h4>
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-3 col-md-offset-3 text-center">
-                <h2>สถานะ :</h2>
+
+            @*สถานที่สอบ*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">สถานที่สอบ</label>
+                <div class="col-md-7">
+                    <h4 class="text-dark">สำนักงานกรุงเทพ</h4>
+                </div>
             </div>
-            <div class="col-md-3 text-center">
-                <h2 class="text-warning"><span>ผ่าน</span></h2>
+
+            @*หลักสูตร*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">หลักสูตร</label>
+                <div class="col-md-7">
+                    <h4 class="text-dark">ภาค ก</h4>
+                </div>
             </div>
-        </div>
-        <div class="input-group col-md-6 col-md-offset-3">
-            <input type="text" class="form-control" value="http://www.google.com">
-            <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Copy</button>
-            </span>
-        </div>
+
+            @*รอบการสอบ*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">รอบการสอบ</label>
+                <div class="col-md-7">
+                    <h4 class="text-dark">เช้า (9.00 - 12.00 น)</h4>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-2 col-md-offset-4 text-center">
+                    <h2>สถานะ :</h2>
+                </div>
+                <div class="col-md-2 text-center">
+                    <h2 class="text-warning"><span>ผ่าน</span></h2>
+                </div>
+            </div>
+
+            <div class="input-group col-md-6 col-md-offset-3">
+                <input type="text" class="form-control" value="http://www.google.com">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Copy</button>
+                </span>
+            </div>
+        </fieldset>
     </form>
 </div>
 
