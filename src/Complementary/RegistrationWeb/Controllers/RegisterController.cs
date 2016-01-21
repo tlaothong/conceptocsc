@@ -50,7 +50,11 @@ namespace RegistrationWeb.Controllers
         }
 
         // GET: Print exan card
-        public ActionResult PrintExanCard()
+        public ActionResult PrintExamCard()
+        {
+            return View();
+        }
+        public ActionResult ExamCard()
         {
             return View();
         }

@@ -357,7 +357,7 @@
     <Content Include="Views\Register\Index.cshtml" />
     <Content Include="Views\Register\PersonalDetail.cshtml" />
     <Content Include="Views\Register\Payment.cshtml" />
-    <Content Include="Views\Register\PrintExanCard.cshtml" />
+    <Content Include="Views\Register\PrintExamCard.cshtml" />
     <Content Include="Views\PaymentCode\PaymentCode.cshtml" />
     <Content Include="Views\Certificated\Certificated.cshtml" />
     <Content Include="Views\Certificated\CertificatedDetail.cshtml" />
@@ -377,6 +377,7 @@
     <Content Include="Views\Register\ConfirmByBank.cshtml" />
     <Content Include="Views\Shared\_BlankLayout.cshtml" />
     <Content Include="Views\Register\Invoice.cshtml" />
+    <Content Include="Views\Register\ExamCard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
