@@ -11,8 +11,11 @@ namespace RegistrationWeb.Models
         ///////////////  Step 1  ////////////////
         public DateTime ExamDate { get; set; }
         public string ExamLocation { get; set; }
+        /// <summary>
+        /// หลักสูตรที่สอบ 
+        /// ภาค ก : "OCSCa"
+        /// </summary>
         public string ExamType { get; set; }
-
         /// <summary>
         /// รอบการสอบ 
         /// 1: เช้า (9.00 - 12.00 น.)
@@ -26,7 +29,7 @@ namespace RegistrationWeb.Models
         public DateTime BirthDate { get; set; }
         public string PID { get; set; }
         public string Address { get; set; }
-        public int PhoneNum { get; set; }
+        public string PhoneNum { get; set; }
         public string Email { get; set; }
 
         ////////////// Step 3  /////////////////
@@ -38,6 +41,8 @@ namespace RegistrationWeb.Models
         /// 4 : Online banking
         /// </summary>
         public int PaymentMethod { get; set; }
+
+        ////////////// Step 4  /////////////////
 
         ////////////// Step 5  /////////////////
         public string RegisterCode { get; set; }
