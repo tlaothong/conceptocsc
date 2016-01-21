@@ -27,11 +27,15 @@ namespace RegistrationWeb.Controllers
         }
 
         // GET: Confirm
-        public ActionResult Confirm()
+        public ActionResult ConfirmByCreditCard()
         {
             return View();
         }
-        
+        public ActionResult ConfirmByOnlineBanking()
+        {
+            return View();
+        }
+
         // GET: Print exan card
         public ActionResult PrintExanCard()
         {

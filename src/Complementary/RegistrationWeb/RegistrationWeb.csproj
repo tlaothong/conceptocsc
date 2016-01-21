@@ -356,7 +356,6 @@
     <Content Include="Views\Register\PersonalDetail.cshtml" />
     <Content Include="Views\Register\Payment.cshtml" />
     <Content Include="Views\Register\PrintExanCard.cshtml" />
-    <Content Include="Views\Register\Confirm.cshtml" />
     <Content Include="Views\PaymentCode\PaymentCode.cshtml" />
     <Content Include="Views\Certificated\Certificated.cshtml" />
     <Content Include="Views\Certificated\CertificatedDetail.cshtml" />
@@ -370,6 +369,8 @@
     <None Include="Service References\RegistrationService\RegistrationService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Views\Register\ConfirmByCreditCard.cshtml" />
+    <Content Include="Views\Register\ConfirmByOnlineBanking.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
