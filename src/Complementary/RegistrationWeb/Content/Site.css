@@ -32,3 +32,17 @@ textarea {
 .text-dark{
     color:#000000;
 }
+div.navbar-inverse{
+    background:#555555;
+    background-image:none;
+}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #fff;
+    background-color:#2a2a2a !important;
+}
+.navbar-inverse .navbar-toggle {
+    border-color:#2a2a2a !important;
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: #2a2a2a;
+}
