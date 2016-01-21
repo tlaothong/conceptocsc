@@ -1,4 +1,5 @@
-﻿
+﻿@model RegistrationWeb.Models.SharedViewModel
+
 @{
     ViewBag.Title = "หน้าแรก";
 }
@@ -11,64 +12,64 @@
     </div>
 </div>
 
-
 @*Content*@
 <div>
     <h2>เลือกวันสอบ</h2>
-
-    <form class="form-horizontal">
-        <fieldset class="well">
-            <legend></legend>
-            @*Calendar*@
-            <div class="col-md-4">
-                <div class="row">
-                    <div>
-                        <h4>เลือกวันสอบ</h4>
-                        <input type="date" class="form-control" />
+    @using (Html.BeginForm("PersonalDetail", "Register"))
+    {
+        <div class="form-horizontal">
+            @Html.HiddenFor(model => model.Address)
+            @Html.HiddenFor(model => model.Email)
+            <fieldset class="well">
+                <legend></legend>
+                @*Calendar*@
+                <div class="col-md-4">
+                    <div class="row">
+                        <div>
+                            <h4>เลือกวันสอบ</h4>
+                            @Html.TextBoxFor(model => model.ExamDate, new { @type = "date", @class = "form-control" })
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            @*Input content*@
-            <div class="col-md-6 col-md-offset-2">
-                @*สถานที่สอบ*@
-                <div class="row">
-                    <h4>สถานที่สอบ</h4>
-                    <select class="form-control">
-                        <option selected="selected">สำนักงาน กรุงเทพฯ</option>
-                    </select>
-                </div>
-
-                @*หลักสูตร*@
-                <div class="row">
-                    <h4>หลักสูตร</h4>
-                    <select class="form-control">
-                        <option selected="selected">ภาค ก</option>
-                    </select>
-                </div>
-
-                @*รอบการสอบ*@
-                <div class="row">
-                    <h4>รอบการสอบ</h4>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="optionsRadios" checked>
-                            เช้า (9.00 - 12.00 น)
-                        </label>
+                @*Input content*@
+                <div class="col-md-6 col-md-offset-2">
+                    @*สถานที่สอบ*@
+                    <div class="row">
+                        <h4>สถานที่สอบ</h4>
+                        @Html.DropDownListFor(model => model.ExamLocation, new List<SelectListItem> { new SelectListItem { Value = "สำนักงาน กรุงเทพฯ", Text = "สำนักงาน กรุงเทพฯ" } }, new { @class = "form-control" })
                     </div>
-                    <div class="radio">
-                        <label>
-                            <input type="radio" name="optionsRadios">
-                            บ่าย (13.00 - 16.00 น)
-                        </label>
+
+                    @*หลักสูตร*@
+                    <div class="row">
+                        <h4>หลักสูตร</h4>
+                        <select class="form-control">
+                            <option selected="selected">ภาค ก</option>
+                        </select>
+                    </div>
+                    
+                    @*รอบการสอบ*@
+                    <div class="row">
+                        <h4>รอบการสอบ</h4>
+                        <div class="radio">
+                            <label>
+                                @Html.RadioButtonFor(model => model.ExamPeriod, 1)
+                                เช้า (9.00 - 12.00 น)
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                @Html.RadioButtonFor(model => model.ExamPeriod, 2)
+                                บ่าย (13.00 - 16.00 น)
+                            </label>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </fieldset>
-    </form>
+            </fieldset>
+        </div>
+        <div class="clearfix">
+            <button class="btn btn-lg btn-info pull-right" type="submit">ถัดไป <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+        </div>
+    }
 
-    @*ถัดไป*@
-    <div class="clearfix">
-        <a class="btn btn-lg btn-info pull-right" href="/Register/PersonalDetail">ถัดไป <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
-    </div>
 </div>

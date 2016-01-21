@@ -12,13 +12,14 @@ namespace RegistrationWeb.Controllers
         // GET: Register index
         public ActionResult Index()
         {
-            return View();
+            var model = new SharedViewModel();
+            return View(model);
         }
 
         // GET: Register personal detail
-        public ActionResult PersonalDetail()
+        public ActionResult PersonalDetail(SharedViewModel model)
         {
-            return View();
+            return View(model);
         }
 
         // GET: Payment
