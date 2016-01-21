@@ -9,35 +9,39 @@
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            <a href="/Home/Index"><img height="50" src="~/Asset/images/Logo_Customer.png" /></a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("หน้าหลัก", "Index", "Home")</li>
-                    <li>@Html.ActionLink("สมัครสอบ", "Index", "Register")</li>
-                    <li>@Html.ActionLink("กรอกรหัสชำระเงิน", "PaymentCode", "PaymentCode")</li>
-                    <li>@Html.ActionLink("ดูผลสอบ", "Certificated", "Certificated")</li>
+    <div class="wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/Home/Index"><img height="50" src="~/Asset/images/Logo_Customer.png" /></a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("หน้าหลัก", "Index", "Home")</li>
+                        <li>@Html.ActionLink("สมัครสอบ", "Index", "Register")</li>
+                        <li>@Html.ActionLink("กรอกรหัสชำระเงิน", "PaymentCode", "PaymentCode")</li>
+                        <li>@Html.ActionLink("ดูผลสอบ", "Certificated", "Certificated")</li>
 
-                </ul>
-                @Html.Partial("_LoginPartial")
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - สำนักงาน ก.พ.</p>
+        <div class="container body-content body">
+            @RenderBody()
+        </div>
+        <footer class="footer text-center">
+            <span>สำนักงานคณะกรรมการข้าราชการพลเรือน (สำนักงาน ก.พ.)</span>
+            <br />
+            <span>Office of the Civil Service Commission (OCSC)</span>     
         </footer>
     </div>
+
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
