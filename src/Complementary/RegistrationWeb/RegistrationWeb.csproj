@@ -370,11 +370,13 @@
     <None Include="Service References\RegistrationService\RegistrationService2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <Content Include="Views\Register\Invoice.cshtml" />
+    <Content Include="Views\Register\_Invoice.cshtml" />
     <Content Include="Views\Register\ConfirmByCreditCard.cshtml" />
     <Content Include="Views\Register\ConfirmByOnlineBanking.cshtml" />
     <Content Include="Views\Register\ConfirmByCounterService.cshtml" />
     <Content Include="Views\Register\ConfirmByBank.cshtml" />
+    <Content Include="Views\Shared\_BlankLayout.cshtml" />
+    <Content Include="Views\Register\Invoice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
