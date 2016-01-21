@@ -35,7 +35,14 @@ namespace RegistrationWeb.Controllers
         {
             return View();
         }
-
+        public ActionResult ConfirmByCounterService()
+        {
+            return View();
+        }
+        public ActionResult ConfirmByBank()
+        {
+            return View();
+        }
         // GET: Print exan card
         public ActionResult PrintExanCard()
         {

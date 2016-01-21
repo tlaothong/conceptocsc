@@ -371,6 +371,8 @@
     </None>
     <Content Include="Views\Register\ConfirmByCreditCard.cshtml" />
     <Content Include="Views\Register\ConfirmByOnlineBanking.cshtml" />
+    <Content Include="Views\Register\ConfirmByCounterService.cshtml" />
+    <Content Include="Views\Register\ConfirmByBank.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "ConfirmByCounterService";
+}
+
+
+<div>
+    <br />
+    <img class="img-responsive" src="~/Asset/images/Progress4.png" />
+</div>
+
+@*Content*@
+<div class="container">
+    <form class="form-horizontal">
+        <fieldset class="well">
+            <h2>ชำระผ่านเคาน์เตอร์เซอร์วิส</h2>
+            <div class="col-md-offset-1">
+                <p>1.กดปุ่ม "พิมพ์ใบชำระเงิน" เพื่อทำการพิมพ์ใบชำระเงิน</p>
+                <p>2.นำใบชำระเงินไปชำระที่เคาเตอร์เซอวิส</p>
+                <p>3.นำรหัสใบเสร็จจากใบเสร็จที่ได้จากการชำระเงินมากรอกที่ช่อง "กรอกรหัสใบเสร็จ"</p>
+                <p>4.กดปุ่ม "ยืนยัน"</p>
+            </div>
+            <div class="text-center">
+                <a class="btn btn-info" href="#">พิมพ์ใบชำระเงิน <span class="glyphicon glyphicon-print" aria-hidden="true"></span></a>
+            </div>
+            <h5 class="text-danger text-center">*เมื่อพิมพ์ใบชำระเงินแล้วสามารถย้อนกลับมากรอกรหัสใบเสร็จภายหลังได้ <a href="">ดูวิธีการได้ที่นี่</a></h5>
+
+            <div class="form-group">
+                <label class="col-md-3 control-label">กรอกรหัสใบเสร็จ</label>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" />
+                </div>
+                <div class="col-md-2">
+                    <a class="btn btn-success"  href="/Register/PrintExanCard">ยืนยัน</a>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+    @*ถัดไป*@
+    <div class="row">
+        <a class="btn btn-lg btn-success pull-left" href="/Register/Payment"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> ย้อนกลับ</a>
+    </div>
+</div>
+
+
