@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "";
+}
+
+@*Content*@
+<div class="container">
+    <form class="form-horizontal">
+        <fieldset class="well">
+            <div class="row text-center">
+                <div class="col-md-6 col-md-offset-3">
+                    <img class="col-xs-12" src="~/Asset/images/barcode.png" height="100" />
+                    <h2>68462035465</h2>
+                </div>
+
+            </div>
+
+            @*เลขที่ใบเสร็จ*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">เลขที่ใบเสร็จ (Invoice No.)</label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" disabled="disabled" placeholder="394683332">
+                </div>
+            </div>
+
+            @*ชื่อผู้สมัคร*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">ชื่อผู้สมัคร (Payer)</label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" disabled="disabled" placeholder="นายณรงค์ ฟางน้อย">
+                </div>
+            </div>
+
+            @*วันที่สมัคร*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">วันที่สมัคร (Transation date)</label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" disabled="disabled" placeholder="20/1/2016  10.45">
+                </div>
+            </div>
+
+            @*กำหนดชำระ*@
+            <div class="form-group">
+                <label class="col-md-3 control-label">กำหนดชำระ (Expired date)</label>
+                <div class="col-md-7">
+                    <input type="text" class="form-control" disabled="disabled" placeholder="20/1/2016  16.45">
+                </div>
+            </div>
+
+            <hr />
+
+            @*จำนวนเงินที่ชำระ*@
+            <div class="form-group">
+                <h3 class="col-md-3 control-label">จำนวนเงินที่ชำระ (Amounts)</h3>
+                <h1 class="col-md-7 col-md-offset-2 text-danger">300.00 บาท/Baht</h1>
+            </div>
+
+            @*กำหนดชำระ*@
+            <div class="form-group">
+                <label class="col-xs-offset-1 control-label">ไม่รวมค่าธรรมเนียมของเคาเตอร์เซอวิส</label><br />
+                <label class="col-xs-offset-1 control-label">(Excluding service fees at Counter Service)</label>
+            </div>
+
+        </fieldset>
+    </form>
+</div>

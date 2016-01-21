@@ -43,6 +43,12 @@ namespace RegistrationWeb.Controllers
         {
             return View();
         }
+        // GET: Invoice
+        public ActionResult Invoice()
+        {
+            return View();
+        }
+
         // GET: Print exan card
         public ActionResult PrintExanCard()
         {

@@ -190,6 +190,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Asset\images\barcode.png" />
     <Content Include="Asset\images\Progress1.png" />
     <Content Include="Asset\images\Progress2.png" />
     <Content Include="Asset\images\Progress3.png" />
@@ -369,6 +370,7 @@
     <None Include="Service References\RegistrationService\RegistrationService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Views\Register\Invoice.cshtml" />
     <Content Include="Views\Register\ConfirmByCreditCard.cshtml" />
     <Content Include="Views\Register\ConfirmByOnlineBanking.cshtml" />
     <Content Include="Views\Register\ConfirmByCounterService.cshtml" />
