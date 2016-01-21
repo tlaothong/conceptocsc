@@ -82,7 +82,7 @@ namespace RegistrationWeb.Controllers
         /// </summary>
         /// <param name="data"></param>
         /// <param name="schoolID"></param>
-        public void RegisterToEExam(SharedViewModel data)
+        private void RegisterToEExam(SharedViewModel data)
         {
             #region Convertion
             //แปลข้อมูล TestPerson เป็น Registraion
