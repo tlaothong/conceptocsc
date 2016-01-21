@@ -9,23 +9,20 @@ namespace RegistrationWeb.Controllers
 {
     public class RegisterController : Controller
     {
-        // GET: Register index
         public ActionResult Index()
         {
             var model = new SharedViewModel();
             return View(model);
         }
-
-        // GET: Register personal detail
+        
         public ActionResult PersonalDetail(SharedViewModel model)
         {
             return View(model);
         }
-
-        // GET: Payment
+        
         public ActionResult Payment(SharedViewModel model)
         {
-            return View();
+            return View(model);
         }
 
         public ActionResult ConfirmPayment(SharedViewModel model)
@@ -44,34 +41,37 @@ namespace RegistrationWeb.Controllers
                     return View("ConfirmByBank");
             }
         }
-
+        
         public ActionResult ConfirmByBank(SharedViewModel model)
         {
             return View();
         }
-
+        
         public ActionResult ConfirmByCounterService(SharedViewModel model)
         {
             return View();
         }
-
-        // GET: Confirm
+        
         public ActionResult ConfirmByCreditCard(SharedViewModel model)
         {
             return View();
         }
+        
         public ActionResult ConfirmByOnlineBanking(SharedViewModel model)
         {
             return View();
         }
         
-        // GET: Invoice
-        public ActionResult Invoice()
+        public ActionResult Invoice(SharedViewModel model)
         {
-            return View();
-        }
+            var expiredDate = 6;
+            var amount = 300;
 
-        // GET: Print exan card
+            ViewBag.ExpiredDate = model.ExamDate.AddHours(expiredDate);
+            ViewBag.Amount = amount;
+            return View(model);
+        }
+        
         public ActionResult PrintExamCard(SharedViewModel model)
         {
             //SharedViewModel data = new SharedViewModel
@@ -104,6 +104,7 @@ namespace RegistrationWeb.Controllers
             RegisterToEExam(model);
             return View(model);
         }
+
         public ActionResult ExamCard()
         {
             return View();

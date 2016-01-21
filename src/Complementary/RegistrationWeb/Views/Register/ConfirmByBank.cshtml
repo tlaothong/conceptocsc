@@ -13,35 +13,41 @@
 
 <div>
     <h2>ชำระผ่านธนาคาร</h2>
-    @using (Html.BeginForm("PrintExamCard", "Register"))
-    {
-        <div class="form-horizontal">
-            @Html.HiddenFor(model => model.ExamDate)
-            @Html.HiddenFor(model => model.ExamLocation)
-            @Html.HiddenFor(model => model.ExamType)
-            @Html.HiddenFor(model => model.ExamPeriod)
-            @Html.HiddenFor(model => model.FirstName)
-            @Html.HiddenFor(model => model.LastName)
-            @Html.HiddenFor(model => model.BirthDate)
-            @Html.HiddenFor(model => model.PID)
-            @Html.HiddenFor(model => model.Address)
-            @Html.HiddenFor(model => model.PhoneNum)
-            @Html.HiddenFor(model => model.Email)
-            @Html.HiddenFor(model => model.PaymentMethod)
-            @Html.HiddenFor(model => model.RegisterCode)
-            <fieldset class="well">
+    <div class="form-horizontal">
+        <fieldset class="well">
 
-                <div class="col-md-offset-1">
-                    <p>1.กดปุ่ม "พิมพ์ใบชำระเงิน" เพื่อทำการพิมพ์ใบชำระเงิน</p>
-                    <p>2.นำใบชำระเงินไปชำระที่ธนาคาร</p>
-                    <p>3.นำรหัสใบเสร็จจากใบเสร็จที่ได้จากการชำระเงินมากรอกที่ช่อง "กรอกรหัสใบเสร็จ"</p>
-                    <p>4.กดปุ่ม "ยืนยัน"</p>
-                </div>
+            <div class="col-md-offset-1">
+                <p>1.กดปุ่ม "พิมพ์ใบชำระเงิน" เพื่อทำการพิมพ์ใบชำระเงิน</p>
+                <p>2.นำใบชำระเงินไปชำระที่ธนาคาร</p>
+                <p>3.นำรหัสใบเสร็จจากใบเสร็จที่ได้จากการชำระเงินมากรอกที่ช่อง "กรอกรหัสใบเสร็จ"</p>
+                <p>4.กดปุ่ม "ยืนยัน"</p>
+            </div>
+            @using (Html.BeginForm("Invoice", "Register", FormMethod.Post, new { target = "_blank" }))
+            {
+                @Html.HiddenFor(model => model.ExamDate)
+                @Html.HiddenFor(model => model.FirstName)
+                @Html.HiddenFor(model => model.LastName)
                 <div class="text-center">
-                    <a class="btn btn-danger" target="_blank" href="/Register/Invoice">พิมพ์ใบชำระเงิน <span class="glyphicon glyphicon-print" aria-hidden="true"></span></a>
+                    <button class="btn btn-danger" type="submit">พิมพ์ใบชำระเงิน <span class="glyphicon glyphicon-print" aria-hidden="true"></span></button>
                 </div>
-                <h5 class="text-danger text-center">*เมื่อพิมพ์ใบชำระเงินแล้วสามารถย้อนกลับมากรอกรหัสใบเสร็จภายหลังได้ <a href="#">ดูวิธีการได้ที่นี่</a></h5>
+            }
+            <h5 class="text-danger text-center">*เมื่อพิมพ์ใบชำระเงินแล้วสามารถย้อนกลับมากรอกรหัสใบเสร็จภายหลังได้ <a href="#">ดูวิธีการได้ที่นี่</a></h5>
 
+            @using (Html.BeginForm("PrintExamCard", "Register"))
+            {
+                @Html.HiddenFor(model => model.ExamDate)
+                @Html.HiddenFor(model => model.ExamLocation)
+                @Html.HiddenFor(model => model.ExamType)
+                @Html.HiddenFor(model => model.ExamPeriod)
+                @Html.HiddenFor(model => model.FirstName)
+                @Html.HiddenFor(model => model.LastName)
+                @Html.HiddenFor(model => model.BirthDate)
+                @Html.HiddenFor(model => model.PID)
+                @Html.HiddenFor(model => model.Address)
+                @Html.HiddenFor(model => model.PhoneNum)
+                @Html.HiddenFor(model => model.Email)
+                @Html.HiddenFor(model => model.PaymentMethod)
+                @Html.HiddenFor(model => model.RegisterCode)
                 <div class="form-group">
                     <label class="col-md-3 control-label">กรอกรหัสใบเสร็จ</label>
                     <div class="col-md-6">
@@ -51,12 +57,13 @@
                         <button class="btn btn-info" type="submit">ยืนยัน</button>
                     </div>
                 </div>
+            }
 
-            </fieldset>
-        </div>
+        </fieldset>
+    </div>
 
-        <div class="clearfix">
-            <a class="btn btn-lg btn-info pull-left" href="/Register/Payment"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> ย้อนกลับ</a>
-        </div>
-    }
+    <div class="clearfix">
+        <a class="btn btn-lg btn-info pull-left" href="/Register/Payment"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> ย้อนกลับ</a>
+    </div>
+
 </div>

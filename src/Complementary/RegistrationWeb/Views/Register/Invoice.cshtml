@@ -1,4 +1,5 @@
-﻿
+﻿@model RegistrationWeb.Models.SharedViewModel
+
 @{
     ViewBag.Title = "Invoice";
     Layout = "~/Views/Shared/_BlankLayout.cshtml";
@@ -27,7 +28,7 @@
             <div class="form-group">
                 <label class="col-md-3 control-label">ชื่อผู้สมัคร (Payer)</label>
                 <div class="col-md-7">
-                    <h4 class="text-dark">นายณรงค์ ฟางน้อย</h4>
+                    <h4 class="text-dark">@Model.FirstName @Model.LastName</h4>
                 </div>
             </div>
 
@@ -35,7 +36,7 @@
             <div class="form-group">
                 <label class="col-md-3 control-label">วันที่สมัคร (Transation date)</label>
                 <div class="col-md-7">
-                    <h4 class="text-dark">20/1/2016  10.45</h4>
+                    <h4 class="text-dark">@Model.ExamDate</h4>
                 </div>
             </div>
 
@@ -43,14 +44,14 @@
             <div class="form-group">
                 <label class="col-md-3 control-label">กำหนดชำระ (Expired date)</label>
                 <div class="col-md-7">
-                    <h4 class="text-dark">20/1/2016  16.45</h4>
+                    <h4 class="text-dark">@ViewBag.ExpiredDate</h4>
                 </div>
             </div>
 
             @*จำนวนเงินที่ชำระ*@
             <div class="form-group">
                 <h3 class="col-md-3 control-label">จำนวนเงินที่ชำระ (Amounts)</h3>
-                <h1 class="col-md-7 text-danger">300.00 บาท/Baht</h1>
+                <h1 class="col-md-7 text-danger">@ViewBag.Amount บาท/Baht</h1>
             </div>
 
             @*กำหนดชำระ*@
