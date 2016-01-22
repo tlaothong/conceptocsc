@@ -8,49 +8,44 @@
 <form class="form-horizontal" >
     <fieldset class="well">
         <h2 class="text-dark text-center">บัตรประจำตัวสอบ</h2>
-        @*รหัสผู้เข้าสอบ*@
+        
         <div class="form-group">
             <p class="col-md-3 control-label">รหัสผู้เข้าสอบ</p>
-            <h4 class="col-md-7 text-danger">5DS3A14e64a3</h4>
+            <h4 class="col-md-7 text-danger">@Model.RegisterCode</h4>
         </div>
 
-        @*ชื่อนามสกุล*@
         <div class="form-group">
             <p class="col-md-3 control-label">ชื่อนามสกุล</p>
             <div class="col-md-7">
-                <h4 class="text-dark">นายณรงค์ ฟางน้อย</h4>
+                <h4 class="text-dark">@Model.FirstName @Model.LastName</h4>
             </div>
         </div>
 
-        @*เลขประจำตัวประชาชน*@
         <div class="form-group">
             <p class="col-md-3 control-label">เลขประจำตัวประชาชน</p>
             <div class="col-md-7">
-                <h4 class="text-dark">1409900787xxx</h4>
+                <h4 class="text-dark">@Model.PID</h4>
             </div>
         </div>
 
-        @*วันที่สอบ*@
         <div class="form-group">
             <p class="col-md-3 control-label">วันที่สอบ</p>
             <div class="col-md-7">
-                <h4 class="text-dark">20/1/2016</h4>
+                <h4 class="text-dark">@Model.ExamDate</h4>
             </div>
         </div>
 
-        @*สถานที่สอบ*@
         <div class="form-group">
             <p class="col-md-3 control-label">สถานที่สอบ</p>
             <div class="col-md-7">
-                <h4 class="text-dark">สำนักงานกรุงเทพ</h4>
+                <h4 class="text-dark">@Model.ExamLocation</h4>
             </div>
         </div>
 
-        @*หลักสูตร*@
         <div class="form-group">
             <p class="col-md-3 control-label">หลักสูตร</p>
             <div class="col-md-7">
-                <h4 class="text-dark">ภาค ก</h4>
+                <h4 class="text-dark">@ViewBag.ExamTypeText</h4>
             </div>
         </div>
 
@@ -58,7 +53,7 @@
         <div class="form-group">
             <label class="col-md-3 control-label">รอบการสอบ</label>
             <div class="col-md-7">
-                <h4 class="text-dark">เช้า (9.00 - 12.00 น)</h4>
+                <h4 class="text-dark">@ViewBag.ExamPeriodText</h4>
             </div>
         </div>
     </fieldset>

@@ -57,9 +57,22 @@
                 </div>
             </div>
 
-            <div class="text-center">
-                <a class="btn btn-lg btn-info" target="_blank" href="/Register/ExamCard">พิมพ์บัตรเข้าสอบ</a>
-            </div>
+
+            @using (Html.BeginForm("ExamCard", "Register", FormMethod.Post, new { target = "_blank" }))
+            {
+                @Html.HiddenFor(model => model.PaymentMethod)
+                @Html.HiddenFor(model => model.RegisterCode)
+                @Html.HiddenFor(model => model.FirstName)
+                @Html.HiddenFor(model => model.LastName)
+                @Html.HiddenFor(model => model.PID)
+                @Html.HiddenFor(model => model.ExamDate)
+                @Html.HiddenFor(model => model.ExamLocation)
+                @Html.HiddenFor(model => model.ExamType)
+                @Html.HiddenFor(model => model.ExamPeriod)
+                <div class="text-center">
+                    <button class="btn btn-lg btn-info" type="submit">พิมพ์บัตรเข้าสอบ</button>
+                </div>
+            }
         </fieldset>
     </div>
 

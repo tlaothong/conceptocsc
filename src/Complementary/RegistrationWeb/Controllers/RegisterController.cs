@@ -100,11 +100,12 @@ namespace RegistrationWeb.Controllers
             //Hack: Mock data
             //model.RegisterCode = "5DS3A14e" + DateTime.Now.Ticks;
 
+            ViewBag.ExamTypeText = string.Empty;
+            ViewBag.ExamPeriodText = string.Empty;
+
             if (!string.IsNullOrEmpty(model.FirstName))
             {
-                ViewBag.ExamTypeText = string.Empty;
                 if (model.ExamType == "OCSCa") ViewBag.ExamTypeText = "ภาค ก";
-                ViewBag.ExamPeriodText = string.Empty;
                 if (model.ExamPeriod == 1) ViewBag.ExamPeriodText = "เช้า (9.00 - 12.00 น.)";
                 else if (model.ExamPeriod == 2) ViewBag.ExamPeriodText = "(13.00 - 16.00 น.)";
 
@@ -130,7 +131,6 @@ namespace RegistrationWeb.Controllers
                     RegisterCode = "13579",
                 };
                 if (model.ExamType == "OCSCa") ViewBag.ExamTypeText = "ภาค ก";
-                ViewBag.ExamPeriodText = string.Empty;
                 if (model.ExamPeriod == 1) ViewBag.ExamPeriodText = "เช้า (9.00 - 12.00 น.)";
                 else if (model.ExamPeriod == 2) ViewBag.ExamPeriodText = "(13.00 - 16.00 น.)";
             }
@@ -138,9 +138,15 @@ namespace RegistrationWeb.Controllers
             return View(model);
         }
 
-        public ActionResult ExamCard()
+        public ActionResult ExamCard(SharedViewModel model)
         {
-            return View();
+            ViewBag.ExamTypeText = string.Empty;
+            ViewBag.ExamPeriodText = string.Empty;
+
+            if (model.ExamType == "OCSCa") ViewBag.ExamTypeText = "ภาค ก";
+            if (model.ExamPeriod == 1) ViewBag.ExamPeriodText = "เช้า (9.00 - 12.00 น.)";
+            else if (model.ExamPeriod == 2) ViewBag.ExamPeriodText = "(13.00 - 16.00 น.)";
+            return View(model);
         }
 
         /// <summary>
