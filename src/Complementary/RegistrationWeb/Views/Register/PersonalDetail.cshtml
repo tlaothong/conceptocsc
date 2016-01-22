@@ -27,10 +27,13 @@
 
                 <div class="form-group">
                     <label class="col-md-3 control-label">ชื่อนามสกุล</label>
+                    <div class="col-md-1">
+                        @Html.TextBoxFor(model => model.InitialName, new { @placeholder = "นาย", @class = "form-control", required = true })
+                    </div>
                     <div class="col-md-3">
                         @Html.TextBoxFor(model => model.FirstName, new { @placeholder = "ชื่อ", @class = "form-control", required = true })
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         @Html.TextBoxFor(model => model.LastName, new { @placeholder = "นามสกุล", @class = "form-control", required = true })
                     </div>
                 </div>
@@ -71,7 +74,7 @@
                 </div>
             </fieldset>
         </div>
-        
+
         <div class="clearfix">
             <a class="btn btn-lg btn-info pull-left" href="/Register/Index"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> ย้อนกลับ</a>
             <button class="btn btn-lg btn-info pull-right" type="submit">ถัดไป <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>

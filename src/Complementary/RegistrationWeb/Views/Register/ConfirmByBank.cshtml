@@ -25,6 +25,7 @@
             @using (Html.BeginForm("Invoice", "Register", FormMethod.Post, new { target = "_blank" }))
             {
                 @Html.HiddenFor(model => model.ExamDate)
+                @Html.HiddenFor(model => model.InitialName)
                 @Html.HiddenFor(model => model.FirstName)
                 @Html.HiddenFor(model => model.LastName)
                 <div class="text-center">
@@ -39,6 +40,7 @@
                 @Html.HiddenFor(model => model.ExamLocation)
                 @Html.HiddenFor(model => model.ExamType)
                 @Html.HiddenFor(model => model.ExamPeriod)
+                @Html.HiddenFor(model => model.InitialName)
                 @Html.HiddenFor(model => model.FirstName)
                 @Html.HiddenFor(model => model.LastName)
                 @Html.HiddenFor(model => model.BirthDate)

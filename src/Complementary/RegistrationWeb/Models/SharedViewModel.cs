@@ -24,6 +24,7 @@ namespace RegistrationWeb.Models
         public int ExamPeriod { get; set; }
 
         ///////////////  Step 2  ////////////////
+        public string InitialName { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime BirthDate { get; set; }
