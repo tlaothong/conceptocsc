@@ -192,6 +192,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Asset\images\barcode.png" />
+    <Content Include="Asset\images\HowToPay1_1.png" />
+    <Content Include="Asset\images\HowToPay1_2.png" />
+    <Content Include="Asset\images\HowToPay1_3.png" />
+    <Content Include="Asset\images\HowToPay2_1.png" />
+    <Content Include="Asset\images\HowToPay2_2.png" />
+    <Content Include="Asset\images\HowToPay2_3.png" />
+    <Content Include="Asset\images\HowToPayCompleted.png" />
     <Content Include="Asset\images\Logo_Customer.png" />
     <Content Include="Asset\images\OCSC_Banner.jpg" />
     <Content Include="Asset\images\Progress1.png" />
@@ -382,6 +389,7 @@
     <Content Include="Views\Shared\_BlankLayout.cshtml" />
     <Content Include="Views\Register\Invoice.cshtml" />
     <Content Include="Views\Register\ExamCard.cshtml" />
+    <Content Include="Views\Register\HowToPay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -13,14 +13,13 @@
 
 <div>
     <h2>ชำระผ่านเคาน์เตอร์เซอร์วิส</h2>
-
     <div class="form-horizontal">
         <fieldset class="well">
 
             <div class="col-md-offset-1">
                 <p>1.กดปุ่ม "พิมพ์ใบชำระเงิน" เพื่อทำการพิมพ์ใบชำระเงิน</p>
-                <p>2.นำใบชำระเงินไปชำระที่เคาเตอร์เซอวิส</p>
-                <p>3.นำรหัสใบเสร็จจากใบเสร็จที่ได้จากการชำระเงินมากรอกที่ช่อง "กรอกรหัสใบเสร็จ"</p>
+                <p>2.นำใบชำระเงินไปชำระที่เคาน์เตอร์เซอวิส</p>
+                <p>3.นำรหัสจากใบเสร็จมากรอกที่ช่อง "กรอกรหัสใบเสร็จ"</p>
                 <p>4.กดปุ่ม "ยืนยัน"</p>
             </div>
             @using (Html.BeginForm("Invoice", "Register", FormMethod.Post, new { target = "_blank" }))
@@ -32,7 +31,7 @@
                     <button class="btn btn-danger" type="submit">พิมพ์ใบชำระเงิน <span class="glyphicon glyphicon-print" aria-hidden="true"></span></button>
                 </div>
             }
-            <h5 class="text-danger text-center">*เมื่อพิมพ์ใบชำระเงินแล้วสามารถย้อนกลับมากรอกรหัสใบเสร็จภายหลังได้ <a href="#">ดูวิธีการได้ที่นี่</a></h5>
+            <h5 class="text-danger text-center">*เมื่อพิมพ์ใบชำระเงินแล้วสามารถย้อนกลับมากรอกรหัสใบเสร็จภายหลังได้ <a target="_blank" href="/Register/HowToPay">ดูวิธีการได้ที่นี่</a></h5>
 
             @using (Html.BeginForm("PrintExamCard", "Register"))
             {

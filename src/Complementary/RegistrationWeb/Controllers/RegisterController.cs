@@ -61,7 +61,11 @@ namespace RegistrationWeb.Controllers
         {
             return View();
         }
-        
+        public ActionResult HowToPay(SharedViewModel model)
+        {
+            return View();
+        }
+
         public ActionResult Invoice(SharedViewModel model)
         {
             var expiredDate = 6;
