@@ -62,6 +62,7 @@ namespace RegistrationWeb.Controllers
         {
             return View();
         }
+
         public ActionResult HowToPay(SharedViewModel model)
         {
             return View();

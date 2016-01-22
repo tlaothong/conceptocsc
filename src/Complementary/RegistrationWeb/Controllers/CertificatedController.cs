@@ -15,6 +15,7 @@ namespace RegistrationWeb.Controllers
         }
         public ActionResult CertificatedDetail()
         {
+            ViewBag.Url = Request.Url.ToString().ToLower();
             return View();
         }
     }
