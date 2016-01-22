@@ -71,7 +71,9 @@ namespace RegistrationWeb.Controllers
         {
             var expiredDate = 6;
             var amount = 300;
+            var invoiceId = 68462035465;
 
+            ViewBag.InvoiceId = invoiceId;
             ViewBag.ExpiredDate = model.ExamDate.AddHours(expiredDate);
             ViewBag.Amount = amount;
             return View(model);
