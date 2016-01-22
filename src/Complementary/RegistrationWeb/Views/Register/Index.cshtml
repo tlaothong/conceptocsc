@@ -18,9 +18,9 @@
     {
         <div class="form-horizontal">
             @*@Html.HiddenFor(model => model.ExamDate)
-            @Html.HiddenFor(model => model.ExamLocation)
-            @Html.HiddenFor(model => model.ExamType)
-            @Html.HiddenFor(model => model.ExamPeriod)*@
+                @Html.HiddenFor(model => model.ExamLocation)
+                @Html.HiddenFor(model => model.ExamType)
+                @Html.HiddenFor(model => model.ExamPeriod)*@
             @Html.HiddenFor(model => model.FirstName)
             @Html.HiddenFor(model => model.LastName)
             @Html.HiddenFor(model => model.InitialName)
@@ -38,7 +38,8 @@
                     <div class="row">
                         <div>
                             <h4>เลือกวันสอบ</h4>
-                            @Html.TextBoxFor(model => model.ExamDate, new { @type = "date", @class = "form-control", required = true })
+                            @Html.TextBoxFor(model => model.ExamDate, new { @type = "text", @class = "form-control", @disabled = "disabled", required = true })
+                            <div id="datepicker"></div>
                         </div>
                     </div>
 
@@ -83,3 +84,31 @@
     }
 
 </div>
+
+@section scripts{
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({
+                altField: "#ExamDate",
+                minDate: "+1d",
+                beforeShowDay: function (d) {
+                    //console.log('Before Show Day: ' + d + d.getDate());
+                    var day = d.getDay();
+                    var date = d.getDate();
+                    var month = d.getMonth() + 1;
+
+                    var january = 1;
+                    var sunday = 0;
+                    var saturday = 6;
+
+                    var isFullDay = (date == 27) && (month == january);
+                    var isHoliday = (day == sunday) || (day == saturday);
+
+                    if (isFullDay) { return [false, "", "เต็มแล้ว"]; }
+                    else if (isHoliday) { return [false, "", "วันหยุด"]; }
+                    else { return [true, "", ""]; }
+                }
+            });
+        });
+    </script>
+}

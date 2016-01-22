@@ -12,6 +12,7 @@ namespace RegistrationWeb.Controllers
         public ActionResult Index()
         {
             var model = new SharedViewModel();
+            model.ExamDate = DateTime.Today.AddDays(1);
             return View(model);
         }
 
