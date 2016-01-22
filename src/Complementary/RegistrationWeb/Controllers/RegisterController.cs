@@ -14,14 +14,15 @@ namespace RegistrationWeb.Controllers
             var model = new SharedViewModel();
             return View(model);
         }
-        
+
         public ActionResult PersonalDetail(SharedViewModel model)
         {
             return View(model);
         }
-        
+
         public ActionResult Payment(SharedViewModel model)
         {
+            model.RegisterCode = DateTime.Now.Ticks.ToString().Substring(12);
             return View(model);
         }
 
@@ -38,25 +39,25 @@ namespace RegistrationWeb.Controllers
                 case 4:
                     return View("ConfirmByOnlineBanking", model);
                 default:
-                    return View("ConfirmByBank");
+                    return View("ConfirmByBank", model);
             }
         }
-        
+
         public ActionResult ConfirmByBank(SharedViewModel model)
         {
             return View();
         }
-        
+
         public ActionResult ConfirmByCounterService(SharedViewModel model)
         {
             return View();
         }
-        
+
         public ActionResult ConfirmByCreditCard(SharedViewModel model)
         {
             return View();
         }
-        
+
         public ActionResult ConfirmByOnlineBanking(SharedViewModel model)
         {
             return View();
@@ -75,7 +76,7 @@ namespace RegistrationWeb.Controllers
             ViewBag.Amount = amount;
             return View(model);
         }
-        
+
         public ActionResult PrintExamCard(SharedViewModel model)
         {
             //SharedViewModel data = new SharedViewModel
@@ -97,15 +98,43 @@ namespace RegistrationWeb.Controllers
             //RegisterToEExam(model);
 
             //Hack: Mock data
-            model.RegisterCode = "5DS3A14e64a3";
+            //model.RegisterCode = "5DS3A14e" + DateTime.Now.Ticks;
 
-            ViewBag.ExamTypeText = string.Empty;
-            if (model.ExamType == "OCSCa") ViewBag.ExamTypeText = "ภาค ก";
-            ViewBag.ExamPeriodText = string.Empty;
-            if (model.ExamPeriod == 1) ViewBag.ExamPeriodText = "เช้า (9.00 - 12.00 น.)";
-            else if (model.ExamPeriod == 2) ViewBag.ExamPeriodText = "(13.00 - 16.00 น.)";
+            if (!string.IsNullOrEmpty(model.FirstName))
+            {
+                ViewBag.ExamTypeText = string.Empty;
+                if (model.ExamType == "OCSCa") ViewBag.ExamTypeText = "ภาค ก";
+                ViewBag.ExamPeriodText = string.Empty;
+                if (model.ExamPeriod == 1) ViewBag.ExamPeriodText = "เช้า (9.00 - 12.00 น.)";
+                else if (model.ExamPeriod == 2) ViewBag.ExamPeriodText = "(13.00 - 16.00 น.)";
 
-            RegisterToEExam(model);
+                RegisterToEExam(model);
+            }
+            else
+            {
+                //HACK : mock data for print exam card
+                model = new SharedViewModel
+                {
+                    PID = "OCSC001",
+                    FirstName = "สมชาย",
+                    LastName = "สายเสมอ",
+                    Address = "xoxoxoxoxoxo",
+                    BirthDate = DateTime.Now,
+                    Email = "xxx@xxx.com",
+                    ExamDate = DateTime.Now,
+                    ExamLocation = "KKU",
+                    ExamPeriod = 1,
+                    ExamType = "OCSCa",
+                    PaymentMethod = 3,
+                    PhoneNum = "0123456789",
+                    RegisterCode = "13579",
+                };
+                if (model.ExamType == "OCSCa") ViewBag.ExamTypeText = "ภาค ก";
+                ViewBag.ExamPeriodText = string.Empty;
+                if (model.ExamPeriod == 1) ViewBag.ExamPeriodText = "เช้า (9.00 - 12.00 น.)";
+                else if (model.ExamPeriod == 2) ViewBag.ExamPeriodText = "(13.00 - 16.00 น.)";
+            }
+            
             return View(model);
         }
 

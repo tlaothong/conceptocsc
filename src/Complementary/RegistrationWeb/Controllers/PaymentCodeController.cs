@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RegistrationWeb.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,7 @@ namespace RegistrationWeb.Controllers
         // GET: PaymentCode
         public ActionResult PaymentCode()
         {
-            return View();
+            return View(new SharedViewModel());
         }
     }
 }
