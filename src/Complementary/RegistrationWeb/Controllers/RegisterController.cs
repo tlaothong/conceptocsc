@@ -76,7 +76,7 @@ namespace RegistrationWeb.Controllers
             var invoiceId = 68462035465;
 
             ViewBag.InvoiceId = invoiceId;
-            ViewBag.ExpiredDate = model.ExamDate.AddHours(expiredDate);
+            ViewBag.ExpiredDate = DateTime.Now.AddHours(expiredDate);
             ViewBag.Amount = amount;
             return View(model);
         }
@@ -194,6 +194,9 @@ namespace RegistrationWeb.Controllers
                 LicenseType = data.ExamType,
                 ForPractice = false,
                 ForTestSystem = false,
+                PhoneNumber = data.PhoneNum,
+                Address = data.Address,
+                Title = data.InitialName             
             };
             #endregion Convertion
 

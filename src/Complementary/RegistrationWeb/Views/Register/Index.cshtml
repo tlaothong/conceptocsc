@@ -38,7 +38,7 @@
                     <div class="row">
                         <div>
                             <h4>เลือกวันสอบ</h4>
-                            @Html.TextBoxFor(model => model.ExamDate, new { @type = "text", @class = "form-control", @disabled = "disabled", required = true })
+                            @Html.TextBoxFor(model => model.ExamDate, new { @type = "text", @class = "form-control", required = true, @readonly = "readonly" })
                             <div id="datepicker"></div>
                         </div>
                     </div>
